@@ -18,14 +18,14 @@ namespace Traveller.Models.Utils
         //    }
         //}
 
-        //public static void NumberValidator(IComparable input, IComparable minValue, IComparable maxValue, string message)
-        //{
-        //    if (input.CompareTo(minValue) < 0 || input.CompareTo(maxValue) > 0)
-        //    {
-        //        throw new ArgumentException(message);
-        //    }
-        //}
+        public static void NumberValidator(IComparable input, IComparable minValue, IComparable maxValue, string message)
+        {
+            if (input.CompareTo(minValue) <= 0 || input.CompareTo(maxValue) >= 0)
+            {
+                throw new ArgumentException(message);
+            }
+        }
 
-        
+
     }
 }
