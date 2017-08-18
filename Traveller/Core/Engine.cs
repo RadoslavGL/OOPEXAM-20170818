@@ -66,7 +66,7 @@ namespace Traveller.Core
                 catch (Exception ex)
                 {
                     this.Writer.WriteLine(ex.Message);
-                    this.Writer.WriteLine("####################");
+                    //this.Writer.WriteLine("####################");
                 }
             }
         }
@@ -83,7 +83,7 @@ namespace Traveller.Core
 
             var executionResult = command.Execute(parameters);
             this.Writer.WriteLine(executionResult);
-            this.Writer.WriteLine("####################");
+            //this.Writer.WriteLine("####################");
         }
     }
 }

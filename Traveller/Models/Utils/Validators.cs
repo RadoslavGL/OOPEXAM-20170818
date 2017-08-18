@@ -10,19 +10,19 @@ namespace Traveller.Models.Utils
     {
         //something like that
 
-        //public static void StringValidator(string input, int minLength, int maxLength, string message)
-        //{
-        //    if (input.Length < minLength || input.Length > maxLength || input == null)
-        //    {
-        //        throw new ArgumentException(message);
-        //    }
-        //}
+        public static void StringValidator(string input, int minLength, int maxLength, string message)
+        {
+            if (input.Length <= minLength || input.Length >= maxLength || input == null)
+            {
+                throw new ArgumentOutOfRangeException(message);
+            }
+        }
 
         public static void NumberValidator(IComparable input, IComparable minValue, IComparable maxValue, string message)
         {
             if (input.CompareTo(minValue) <= 0 || input.CompareTo(maxValue) >= 0)
             {
-                throw new ArgumentException(message);
+                throw new ArgumentOutOfRangeException(message);
             }
         }
 

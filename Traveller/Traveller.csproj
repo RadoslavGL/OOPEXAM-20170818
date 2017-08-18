@@ -44,7 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\Contracts\ICommand.cs" />
+    <Compile Include="Commands\Creating\CreateAirplaneCommand.cs" />
     <Compile Include="Commands\Creating\CreateJourneyCommand.cs" />
+    <Compile Include="Commands\Creating\CreateTicketCommand.cs" />
     <Compile Include="Commands\Creating\CreateTrainCommand.cs" />
     <Compile Include="Commands\Creating\CreateBusCommand.cs" />
     <Compile Include="Commands\Creating\CreateVehicleCommand.cs" />
@@ -64,22 +66,24 @@
     <Compile Include="Core\Providers\ConsoleWriter.cs" />
     <Compile Include="Models\Contracts\IJourney.cs" />
     <Compile Include="Models\Contracts\ITicket.cs" />
-    <Compile Include="Models\TypeEnum.cs" />
+    <Compile Include="Models\Enums\VehicleType.cs" />
     <Compile Include="Models\Utils\GlobalConsts.cs" />
+    <Compile Include="Models\Utils\Messenger.cs" />
     <Compile Include="Models\Utils\Validators.cs" />
+    <Compile Include="Models\Vehicles\Airplane.cs" />
     <Compile Include="Models\Vehicles\Contracts\IVehicle.cs" />
     <Compile Include="Models\Vehicles\Contracts\IAirplane.cs" />
     <Compile Include="Models\Vehicles\Contracts\IBus.cs" />
     <Compile Include="Models\Vehicles\Contracts\ITrain.cs" />
+    <Compile Include="Models\Vehicles\Train.cs" />
+    <Compile Include="Models\Vehicles\Vehicle.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\Enums\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

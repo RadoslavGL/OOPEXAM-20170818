@@ -19,12 +19,22 @@ namespace Traveller.Models.Vehicles
 
         public Vehicle(int passagerCapacity, decimal pricePerKilometer)
         {
-            this.passagerCapacity = PassangerCapacity;
-            this.pricePerKilometer = PricePerKilometer;
+            this.PassangerCapacity = passagerCapacity;
+            this.PricePerKilometer = pricePerKilometer;
+        }
+
+        public Vehicle(decimal pricePerKilometer)
+        {
+            this.PricePerKilometer = pricePerKilometer;
+        }
+
+        public Vehicle(int passagerCapacity)
+        {
+            this.PassangerCapacity = passagerCapacity;
         }
 
         #region Properties
-        public virtual int PassangerCapacity
+        public int PassangerCapacity
         {
             get
             {
@@ -42,7 +52,7 @@ namespace Traveller.Models.Vehicles
             }
         }
 
-        public virtual decimal PricePerKilometer
+        public decimal PricePerKilometer
         {
             get
             {
